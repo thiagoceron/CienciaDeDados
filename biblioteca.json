@@ -1,0 +1,17 @@
+{
+    "livros": [
+        {
+            "titulo": "Noites Brancas",
+            "autor": "Fiodor Dostoiebski",
+            "isbn": "3",
+            "disponivel": true
+        }
+    ],
+    "usuarios": [
+        {
+            "nome": "Thiago",
+            "cpf": "12596976900",
+            "livros_emprestados": {}
+        }
+    ]
+}
