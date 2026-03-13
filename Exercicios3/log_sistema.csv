@@ -1,0 +1,53 @@
+# Este é um cabeçalho de comentário
+# Data da geração: 2024-01-01
+id_evento,tipo,timestamp,descricao
+1,login,2024-01-01 08:00:00,Usuário admin logou
+2,erro,2024-01-01 08:05:10,Falha ao carregar módulo X
+3,login,2024-01-01 08:10:00,Usuário convidado logou
+4,sucesso,2024-01-01 08:15:30,Operação concluída
+5,logout,2024-01-01 08:20:00,Usuário admin saiu
+6,login,2024-01-01 08:25:10,Usuário maria logou
+7,erro,2024-01-01 08:30:20,Falha na autenticação
+8,sucesso,2024-01-01 08:35:15,Backup realizado
+9,login,2024-01-01 08:40:00,Usuário joao logou
+10,logout,2024-01-01 08:45:10,Usuário convidado saiu
+11,login,2024-01-01 08:50:00,Usuário ana logou
+12,erro,2024-01-01 08:55:20,Falha ao acessar banco
+13,sucesso,2024-01-01 09:00:00,Atualização concluída
+14,login,2024-01-01 09:05:30,Usuário admin logou
+15,logout,2024-01-01 09:10:10,Usuário maria saiu
+16,login,2024-01-01 09:15:00,Usuário carlos logou
+17,erro,2024-01-01 09:20:45,Erro de permissão
+18,sucesso,2024-01-01 09:25:10,Processo finalizado
+19,login,2024-01-01 09:30:00,Usuário convidado logou
+20,logout,2024-01-01 09:35:15,Usuário joao saiu
+21,login,2024-01-01 09:40:00,Usuário maria logou
+22,erro,2024-01-01 09:45:10,Falha ao abrir arquivo
+23,sucesso,2024-01-01 09:50:20,Importação concluída
+24,login,2024-01-01 09:55:00,Usuário pedro logou
+25,logout,2024-01-01 10:00:00,Usuário ana saiu
+26,login,2024-01-01 10:05:30,Usuário admin logou
+27,erro,2024-01-01 10:10:20,Falha na conexão
+28,sucesso,2024-01-01 10:15:00,Exportação concluída
+29,login,2024-01-01 10:20:10,Usuário lucas logou
+30,logout,2024-01-01 10:25:30,Usuário pedro saiu
+31,login,2024-01-01 10:30:00,Usuário maria logou
+32,erro,2024-01-01 10:35:40,Falha ao salvar dados
+33,sucesso,2024-01-01 10:40:10,Sincronização concluída
+34,login,2024-01-01 10:45:00,Usuário joao logou
+35,logout,2024-01-01 10:50:00,Usuário lucas saiu
+36,login,2024-01-01 10:55:00,Usuário ana logou
+37,erro,2024-01-01 11:00:20,Falha ao iniciar serviço
+38,sucesso,2024-01-01 11:05:10,Serviço iniciado
+39,login,2024-01-01 11:10:00,Usuário admin logou
+40,logout,2024-01-01 11:15:30,Usuário maria saiu
+41,login,2024-01-01 11:20:00,Usuário pedro logou
+42,erro,2024-01-01 11:25:20,Falha de autenticação
+43,sucesso,2024-01-01 11:30:10,Operação concluída
+44,login,2024-01-01 11:35:00,Usuário lucas logou
+45,logout,2024-01-01 11:40:00,Usuário joao saiu
+46,login,2024-01-01 11:45:00,Usuário carlos logou
+47,erro,2024-01-01 11:50:30,Falha ao acessar serviço
+48,sucesso,2024-01-01 11:55:20,Atualização aplicada
+49,login,2024-01-01 12:00:00,Usuário convidado logou
+50,logout,2024-01-01 12:05:00,Usuário admin saiu
