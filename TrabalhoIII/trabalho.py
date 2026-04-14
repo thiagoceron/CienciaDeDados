@@ -269,7 +269,7 @@ def exibir_estatisticas(df):
 def explicar_automacao():
     print("cron:")
     print("  crontab -e no  terminal")
-    print("  0 8 * * * /usr/bin/python3 /caminho/projeto_mamografia.py")
+    print("  0 8 * * * /usr/bin/python3 /home/thiagoceron/Documentos/CienciaDados/TrabalhoIII/trabalho.py")
 
 if __name__ == "__main__":
 
