@@ -193,11 +193,12 @@ def gerar_graficos(df):
         .sort_values(ascending=False)
     )
 
-    analise_regiao.plot(kind='bar', color=cores[:len(analise_regiao)], edgecolor='black')
+    analise_regiao_milhoes = analise_regiao / 1_000_000
+    analise_regiao_milhoes.plot(kind='bar', color=cores[:len(analise_regiao)], edgecolor='black')
 
     plt.title('Cobertura de Mamografia por Região do Brasil\n(Soma Acumulada dos Indicadores)', fontsize=13)
     plt.xlabel('Região', fontsize=11)
-    plt.ylabel('Soma dos Indicadores', fontsize=11)
+    plt.ylabel('Soma dos Indicadores (milhões)', fontsize=11)
     plt.xticks(rotation=30, ha='right')
     plt.grid(axis='y', linestyle='--', alpha=0.5)
     plt.tight_layout()
@@ -212,16 +213,18 @@ def gerar_graficos(df):
         .sum()
     )
 
-    rotulos = [
-    f"{str(x)[4:6]}/{str(x)[:4]}" for x in evolucao.index
-]
+    evolucao_milhoes = evolucao / 1_000_000
 
-    plt.plot(range(len(evolucao)), evolucao.values, marker='o', color='green', linewidth=2, markersize=5)
-    plt.xticks(ticks=range(len(evolucao)), labels=rotulos, rotation=45, ha='right')
+    rotulos = [
+        f"{str(x)[4:6]}/{str(x)[:4]}" for x in evolucao.index
+    ]
+
+    plt.plot(range(len(evolucao_milhoes)), evolucao_milhoes.values, marker='o', color='green', linewidth=2, markersize=5)
+    plt.xticks(ticks=range(len(evolucao_milhoes)), labels=rotulos, rotation=45, ha='right')
 
     plt.title('Evolução da Cobertura de Mamografia no Brasil\n(Total por Período)', fontsize=13)
     plt.xlabel('Período (Mês/Ano)', fontsize=11)
-    plt.ylabel('Soma dos Indicadores', fontsize=11)
+    plt.ylabel('Soma dos Indicadores (milhões)', fontsize=11)
     plt.grid(True, linestyle='--', alpha=0.5)
     plt.tight_layout()
     plt.savefig('grafico_evolucao.png', dpi=100)
@@ -230,18 +233,28 @@ def gerar_graficos(df):
 
     plt.figure(figsize=(8, 8))
 
-    analise_regiao.plot(
-        kind='pie',
+    fig, ax = plt.subplots()
+    wedges, texts, autotexts = ax.pie(
+        analise_regiao.values,
+        labels=None,
         autopct='%1.1f%%',
         colors=cores[:len(analise_regiao)],
         startangle=90,
         wedgeprops={'edgecolor': 'white', 'linewidth': 1.5}
     )
 
+    ax.legend(
+        wedges,
+        analise_regiao.index,
+        title="Regiões",
+        loc="center left",
+        bbox_to_anchor=(1, 0.5)
+    )
+
     plt.title('Distribuição Percentual de Mamografias\npor Região do Brasil', fontsize=13)
     plt.ylabel('')
     plt.tight_layout()
-    plt.savefig('grafico_pizza.png', dpi=100)
+    plt.savefig('grafico_pizza.png', dpi=100, bbox_inches='tight')
     plt.close()
     print("Gráfico 3 salvo: 'grafico_pizza.png'\n")
 
